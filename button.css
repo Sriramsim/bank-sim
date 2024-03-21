@@ -1,0 +1,32 @@
+.glittering-button {
+    background-color: #007bff; /* Blue color */
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+  }
+  
+  .glittering-button::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, rgba(255,255,255,0.2), transparent, rgba(255,255,255,0.2));
+    animation: shimmer 2s infinite;
+  }
+  
+  @keyframes shimmer {
+    0% {
+      transform: translate(-25%, -25%);
+    }
+    100% {
+      transform: translate(25%, 25%);
+    }
+  }
+  
